@@ -14,7 +14,7 @@ Route::group(array('prefix' => $locale), function() {
     Route::get('contact', array('as' => 'contact', 'uses' => 'PageController@contact'));
     
     //Change Language
-    Route::get('change_locale/{locale}', array('as' => 'lang', function($locale) {
+    Route::get('change_locale/{locale}', array('as' => 'change_locale', function($locale) {
         App::setLocale($locale);
         $route = Session::get('last_route');
         if ($route == "home") {
