@@ -6,5 +6,6 @@ return array(
     'Contact Form' => 'Контакты',
     'Home' => 'Домашняя страница',
     'News' => 'Новости',
-    'Contact' => 'Контакты'
+    'Contact' => 'Контакты',
+    'Switch locale' => 'Поменять язык'
 );

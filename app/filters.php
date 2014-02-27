@@ -19,7 +19,9 @@ App::before(function($request)
 
 App::after(function($request, $response)
 {
-	//
+    //Store last inside session
+    $route = Route::currentRouteName();
+    Session::put('last_route', $route);
 });
 
 /*

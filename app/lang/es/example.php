@@ -6,6 +6,6 @@ return array(
     'Contact Form' => 'Formulario de Contacto',
     'Home' => 'Portada',
     'News' => 'Noticias',
-    'Contact' => 'Contacto'
-    
+    'Contact' => 'Contacto',
+    'Switch locale' => 'Cambiar idioma'
 );

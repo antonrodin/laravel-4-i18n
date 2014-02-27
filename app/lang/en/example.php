@@ -6,5 +6,6 @@ return array(
     'Contact Form' => 'Contact Form',
     'Home' => 'Home',
     'News' => 'News',
-    'Contact' => 'Contact'
+    'Contact' => 'Contact',
+    'Switch locale' => 'Switch locale'
 );
