@@ -43,11 +43,12 @@ App::after(function($request, $response)
 });
 ````
 
-2. Then... How you can change locale and locale, from any route
-===================================================
+2. Then... How you can change locale and prefix, from any route
+===============================================================
 
 My solution:
 
+```PHP
 Route::group(array('prefix' => $locale), function() {
     Route::get('/', array('as' => 'home', 'uses' => 'PageController@home' ));
     Route::get('news', array('as' => 'news', 'uses' => 'PageController@news' ));
@@ -65,6 +66,7 @@ Route::group(array('prefix' => $locale), function() {
         return Redirect::to($redirect_route);
     }));
 });
+```
 
 Inside your blade template you should have something like this:
 
