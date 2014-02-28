@@ -78,4 +78,22 @@ Inside your blade template you should have something like this:
 </ul>
 ```
 
+3. Wanna redirect to example.com/zh?
+====================================
+
+Inside <strong>PageController@home</strong> method, you should redirect to default_locale when Request::segment(1) is empty:
+
+```PHP
+class PageController extends Controller {  
+    public function home() {
+        $locale = Request::segment(1);    
+        if ($locale == '') {
+            $default_locale = App::getLocale();
+            return Redirect::to("/{$default_locale}");
+        }
+        return View::make('home');
+    }
+}
+```
+
 And all that shoud do the trick... sorry for my English folks!
