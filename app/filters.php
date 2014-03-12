@@ -19,8 +19,14 @@ App::before(function($request)
 
 App::after(function($request, $response)
 {
-    //Store last inside session
-    $route = Route::currentRouteName();
+    //Store last route inside session
+    $i = 1;
+    $route_array = array();
+    while(Request::segment($i)) {
+        $route_array[] = Request::segment($i);
+        $i++;
+    }
+    $route = implode("/", $route_array);
     Session::put('last_route', $route);
 });
 
