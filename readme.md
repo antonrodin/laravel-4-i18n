@@ -61,7 +61,7 @@ Route::group(array('prefix' => $locale), function() {
     
     //Test locale with variable
     Route::get('/test/{variable}', function($variable) {
-        return App::getLocale();
+        return View::make('test')->with('variable', $variable);
     });
 
     //Change Language
